@@ -5,9 +5,10 @@ import java.util.Date;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+
 
 import tn.esprit.spring.entities.Departement;
 import tn.esprit.spring.entities.Employe;
@@ -55,6 +56,9 @@ public class TimesheetServiceImpl implements ITimesheetService {
 	public void affecterMissionADepartement(int missionId, int depId) {
 		try {
 			logger.debug("lancement de l'affectation d'une mission");
+			
+		
+			
 		Mission mission = missionRepository.findById(missionId).get();
 		Departement dep = deptRepoistory.findById(depId).get();
 		mission.setDepartement(dep);
@@ -92,7 +96,7 @@ public class TimesheetServiceImpl implements ITimesheetService {
 
 	
 	public void validerTimesheet(int missionId, int employeId, Date dateDebut, Date dateFin, int validateurId) {
-		System.out.println("In valider Timesheet");
+		logger.info("In valider Timesheet");
 		Employe validateur = employeRepository.findById(validateurId).get();
 		Mission mission = missionRepository.findById(missionId).get();
 		//verifier s'il est un chef de departement (interet des enum)
