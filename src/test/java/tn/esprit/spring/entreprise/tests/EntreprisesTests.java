@@ -10,7 +10,8 @@ import tn.esprit.spring.entities.Entreprise;
 import java.util.List;
 
 import org.apache.log4j.Logger;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+
 
 
 @SpringBootTest
@@ -20,7 +21,7 @@ public class EntreprisesTests {
 	@Autowired
 	RestControlEntreprise entrepriseControl;
 	
-	@Test
+/*	@Test
 	public void testEntreprise() {
 		l.info("*********** Debut tests  **************");
 		Entreprise e = new Entreprise("nameEntreprise","Ghazela");
@@ -57,7 +58,7 @@ Departement testDep = entrepriseControl.ajouterDepartement(depRH);
 		
 		
 	}
-
+*/
 
 
 
