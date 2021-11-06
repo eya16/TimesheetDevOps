@@ -89,7 +89,7 @@ Departement testDep = entrepriseControl.ajouterDepartement(depRH);
 	}
 
 
-
+/*
 	@Test
 
 	public void testGetEntrepriseById(){
@@ -105,6 +105,6 @@ Departement testDep = entrepriseControl.ajouterDepartement(depRH);
 		Assert.assertNull(entrepriseControl.getEntrepriseById(89));
 	}
 
-
+*/
 
 }
